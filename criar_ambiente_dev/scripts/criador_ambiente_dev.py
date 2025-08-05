@@ -1,6 +1,8 @@
 import os
 import subprocess
 import shutil
+import sys
+import time
 
 
 print("Iniciando projeto.")
@@ -11,8 +13,17 @@ version_python = input("Versão python: ")
 packages = input("Pacotes a instalar (separados por espaço ou Enter para pular): ")
 
 
+
+
 #Trocando as \ por / para reconhecer o caminho passado 
 project_path = project_path.replace("\\", "/")
+
+#tratando erro caso passe um valor invalido no caminho
+if not os.path.exists(project_path):
+    print("Caminho não encontrado.")
+    time.sleep(10)
+    sys.exit(1) #1=fecha informando erro / 0=fecha normalmente
+
 
 #Usar os para concatenar caminho passado + nome do projeto que é o diretório criado (BR> full_path = caminho completo)
 full_path = os.path.join(project_path, project_name)
@@ -20,7 +31,13 @@ full_path = os.path.join(project_path, project_name)
 #Executar comando terminal para criar projeto com poetry / cwd é onde será executado o comando 
 subprocess.run(["poetry", "new", project_name], cwd=project_path)
 
-subprocess.run(["poetry", "env", "use", f"python{version_python}"], cwd=full_path)
+try:
+    subprocess.run(["poetry", "env", "use", f"python{version_python}"], cwd=full_path, check=True)
+except subprocess.CalledProcessError:
+    print("Versão de python não encontrada.")
+    time.sleep(10)
+    sys.exit(1)
+
 
 criando_gitignore = """
 # Byte-compiled / optimized / DLL files
@@ -245,5 +262,5 @@ else:
     print("VS Code não está disponível.")
 
 
-# Impede que o terminal feche imediatamente (opcional)
-input("Pressione Enter para sair...")
+input("Projeto criado.")
+time.sleep(10)
