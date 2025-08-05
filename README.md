@@ -1,12 +1,7 @@
-# DailyAutomation - Automação de Tarefas do Dia a Dia
+# 🚀 Automatizando Tudo e Qualquer Coisa
+Olá! Meu nome é Maria Eduarda e este repositório existe por um motivo simples: economizar tempo, mesmo que seja só um segundo!
 
-Olá! Meu nome é Maria Eduarda, e este repositório é parte da minha jornada prática com **Python**, **automação de tarefas** e **organização de projetos úteis para o dia a dia**.
-
-A proposta deste espaço é servir como um **acervo de scripts simples e funcionais** que automatizam tarefas recorrentes no meu fluxo de trabalho.
-
-## 📅 Atualizações frequentes
-
-Semanalmente, pretendo adicionar **novos mini projetos**, sempre voltados para a prática com automações simples.
+A ideia aqui é automatizar qualquer tarefa do dia a dia — por mais boba que pareça. Afinal, pequenas ações repetidas ao longo do tempo podem consumir horas valiosas. Então, por que não deixar o computador trabalhar por você?
 
 ## 🤝 Contribua com sugestões!
 
