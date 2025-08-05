@@ -13,6 +13,6 @@ Semanalmente, pretendo adicionar **novos mini projetos**, sempre voltados para a
 Se você achou interessante, tem ideias para melhorias, correções ou quer apenas deixar um feedback, será **muito bem-vindo(a)**!
 Abra uma issue, um pull request ou envie sugestões — toda contribuição conta! 😊
 
----
+
 
 > Feito por Maria Eduarda
